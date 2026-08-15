@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap 5 RTL</title>
-    <!-- Bootstrap 5 RTL CSS (built output) -->
-    <link rel="stylesheet" href="public/css/style-rtl.min.css">
+    <!-- Bootstrap CSS (swapped by language switcher) -->
+    <link id="bootstrap-css" rel="stylesheet" href="public/css/style-rtl.min.css">
     <style>
         body {
             font-family: 'Vazir', Tahoma, Arial, sans-serif;
@@ -17,6 +17,9 @@
             font-weight: normal;
             font-style: normal;
         }
+        .lang-switcher .btn-check:checked + .btn {
+            box-shadow: inset 0 0 0 2px rgba(255,255,255,.5);
+        }
     </style>
 </head>
 <body>
@@ -24,7 +27,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">بوت‌استرپ ۵ راست به چپ</a>
+        <a class="navbar-brand" href="#" data-i18n="brand">بوت‌استرپ ۵ راست به چپ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,18 +35,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">خانه</a>
+                    <a class="nav-link" href="#" data-i18n="nav_home">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">درباره ما</a>
+                    <a class="nav-link" href="#" data-i18n="nav_about">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">خدمات</a>
+                    <a class="nav-link" href="#" data-i18n="nav_services">خدمات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">تماس</a>
+                    <a class="nav-link" href="#" data-i18n="nav_contact">تماس</a>
                 </li>
             </ul>
+            <!-- Language Switcher -->
+            <div class="lang-switcher d-flex gap-1 ms-2" role="group" aria-label="Language switcher">
+                <input type="radio" class="btn-check" name="lang" id="lang-fa" value="fa" checked>
+                <label class="btn btn-outline-light btn-sm" for="lang-fa">فارسی</label>
+                <input type="radio" class="btn-check" name="lang" id="lang-en" value="en">
+                <label class="btn btn-outline-light btn-sm" for="lang-en">English</label>
+                <input type="radio" class="btn-check" name="lang" id="lang-da" value="da">
+                <label class="btn btn-outline-light btn-sm" for="lang-da">Dansk</label>
+            </div>
         </div>
     </div>
 </nav>
@@ -52,10 +64,10 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>بوت‌استرپ ۵ با پشتیبانی راست به چپ</h1>
-            <p class="lead">این پروژه نسخه RTL بوت‌استرپ ۵ برای زبان‌های فارسی و عربی است.</p>
-            <a href="#" class="btn btn-primary btn-lg">شروع کنید</a>
-            <a href="#" class="btn btn-outline-secondary btn-lg me-2">بیشتر بدانید</a>
+            <h1 data-i18n="hero_title">بوت‌استرپ ۵ با پشتیبانی راست به چپ</h1>
+            <p class="lead" data-i18n="hero_lead">این پروژه نسخه RTL بوت‌استرپ ۵ برای زبان‌های فارسی و عربی است.</p>
+            <a href="#" class="btn btn-primary btn-lg" data-i18n="hero_cta">شروع کنید</a>
+            <a href="#" class="btn btn-outline-secondary btn-lg me-2" data-i18n="hero_more">بیشتر بدانید</a>
         </div>
     </div>
 </div>
@@ -66,27 +78,27 @@
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">کارت اول</h5>
-                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
-                    <a href="#" class="btn btn-primary">بیشتر بخوانید</a>
+                    <h5 class="card-title" data-i18n="card1_title">کارت اول</h5>
+                    <p class="card-text" data-i18n="card1_text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-primary" data-i18n="read_more">بیشتر بخوانید</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">کارت دوم</h5>
-                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
-                    <a href="#" class="btn btn-success">بیشتر بخوانید</a>
+                    <h5 class="card-title" data-i18n="card2_title">کارت دوم</h5>
+                    <p class="card-text" data-i18n="card2_text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-success" data-i18n="read_more">بیشتر بخوانید</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">کارت سوم</h5>
-                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
-                    <a href="#" class="btn btn-danger">بیشتر بخوانید</a>
+                    <h5 class="card-title" data-i18n="card3_title">کارت سوم</h5>
+                    <p class="card-text" data-i18n="card3_text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-danger" data-i18n="read_more">بیشتر بخوانید</a>
                 </div>
             </div>
         </div>
@@ -95,66 +107,66 @@
 
 <!-- Buttons Section -->
 <div class="container mt-3 mb-5">
-    <h3>دکمه‌ها</h3>
-    <button type="button" class="btn btn-primary">اصلی</button>
-    <button type="button" class="btn btn-secondary">ثانوی</button>
-    <button type="button" class="btn btn-success">موفقیت</button>
-    <button type="button" class="btn btn-danger">خطر</button>
-    <button type="button" class="btn btn-warning">هشدار</button>
-    <button type="button" class="btn btn-info">اطلاعات</button>
-    <button type="button" class="btn btn-light">روشن</button>
-    <button type="button" class="btn btn-dark">تاریک</button>
+    <h3 data-i18n="section_buttons">دکمه‌ها</h3>
+    <button type="button" class="btn btn-primary" data-i18n="btn_primary">اصلی</button>
+    <button type="button" class="btn btn-secondary" data-i18n="btn_secondary">ثانوی</button>
+    <button type="button" class="btn btn-success" data-i18n="btn_success">موفقیت</button>
+    <button type="button" class="btn btn-danger" data-i18n="btn_danger">خطر</button>
+    <button type="button" class="btn btn-warning" data-i18n="btn_warning">هشدار</button>
+    <button type="button" class="btn btn-info" data-i18n="btn_info">اطلاعات</button>
+    <button type="button" class="btn btn-light" data-i18n="btn_light">روشن</button>
+    <button type="button" class="btn btn-dark" data-i18n="btn_dark">تاریک</button>
 
-    <h3 class="mt-4">فرم</h3>
+    <h3 class="mt-4" data-i18n="section_form">فرم</h3>
     <form>
         <div class="mb-3">
-            <label for="exampleInput" class="form-label">آدرس ایمیل</label>
-            <input type="email" class="form-control" id="exampleInput" placeholder="ایمیل خود را وارد کنید">
+            <label for="exampleInput" class="form-label" data-i18n="form_email_label">آدرس ایمیل</label>
+            <input type="email" class="form-control" id="exampleInput" data-i18n-placeholder="form_email_ph" placeholder="ایمیل خود را وارد کنید">
         </div>
         <div class="mb-3">
-            <label for="exampleTextarea" class="form-label">پیام</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="پیام خود را بنویسید..."></textarea>
+            <label for="exampleTextarea" class="form-label" data-i18n="form_msg_label">پیام</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" data-i18n-placeholder="form_msg_ph" placeholder="پیام خود را بنویسید..."></textarea>
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck">
-            <label class="form-check-label" for="exampleCheck">موافقم با شرایط</label>
+            <label class="form-check-label" for="exampleCheck" data-i18n="form_agree">موافقم با شرایط</label>
         </div>
-        <button type="submit" class="btn btn-primary">ارسال</button>
+        <button type="submit" class="btn btn-primary" data-i18n="form_submit">ارسال</button>
     </form>
 
-    <h3 class="mt-4">هشدارها</h3>
-    <div class="alert alert-primary" role="alert">این یک هشدار اصلی است.</div>
-    <div class="alert alert-success" role="alert">این عملیات با موفقیت انجام شد.</div>
-    <div class="alert alert-warning" role="alert">این یک هشدار است. توجه کنید.</div>
-    <div class="alert alert-danger" role="alert">خطایی رخ داده است.</div>
+    <h3 class="mt-4" data-i18n="section_alerts">هشدارها</h3>
+    <div class="alert alert-primary" role="alert" data-i18n="alert_primary">این یک هشدار اصلی است.</div>
+    <div class="alert alert-success" role="alert" data-i18n="alert_success">این عملیات با موفقیت انجام شد.</div>
+    <div class="alert alert-warning" role="alert" data-i18n="alert_warning">این یک هشدار است. توجه کنید.</div>
+    <div class="alert alert-danger" role="alert" data-i18n="alert_danger">خطایی رخ داده است.</div>
 
-    <h3 class="mt-4">جدول</h3>
+    <h3 class="mt-4" data-i18n="section_table">جدول</h3>
     <table class="table table-striped table-bordered">
         <thead class="table-dark">
             <tr>
                 <th>#</th>
-                <th>نام</th>
-                <th>نام خانوادگی</th>
-                <th>ایمیل</th>
+                <th data-i18n="th_name">نام</th>
+                <th data-i18n="th_lastname">نام خانوادگی</th>
+                <th data-i18n="th_email">ایمیل</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>۱</td>
-                <td>علی</td>
-                <td>احمدی</td>
+                <td data-i18n="row1_name">علی</td>
+                <td data-i18n="row1_last">احمدی</td>
                 <td>ali@example.com</td>
             </tr>
             <tr>
                 <td>۲</td>
-                <td>مریم</td>
-                <td>حسینی</td>
+                <td data-i18n="row2_name">مریم</td>
+                <td data-i18n="row2_last">حسینی</td>
                 <td>maryam@example.com</td>
             </tr>
             <tr>
                 <td>۳</td>
-                <td>رضا</td>
-                <td>محمدی</td>
+                <td data-i18n="row3_name">رضا</td>
+                <td data-i18n="row3_last">محمدی</td>
                 <td>reza@example.com</td>
             </tr>
         </tbody>
@@ -163,10 +175,140 @@
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">بوت‌استرپ ۵ RTL &mdash; ساخته شده با ❤️</p>
+    <p class="mb-0" data-i18n="footer">بوت‌استرپ ۵ RTL &mdash; ساخته شده با ❤️</p>
 </footer>
 
 <!-- Bootstrap 5 JS -->
 <script src="public/js/bootstrap.bundle.min.js"></script>
+<script>
+const translations = {
+    fa: {
+        brand: 'بوت‌استرپ ۵ راست به چپ',
+        nav_home: 'خانه', nav_about: 'درباره ما', nav_services: 'خدمات', nav_contact: 'تماس',
+        hero_title: 'بوت‌استرپ ۵ با پشتیبانی راست به چپ',
+        hero_lead: 'این پروژه نسخه RTL بوت‌استرپ ۵ برای زبان‌های فارسی و عربی است.',
+        hero_cta: 'شروع کنید', hero_more: 'بیشتر بدانید',
+        card1_title: 'کارت اول', card2_title: 'کارت دوم', card3_title: 'کارت سوم',
+        card1_text: 'این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.',
+        card2_text: 'این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.',
+        card3_text: 'این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.',
+        read_more: 'بیشتر بخوانید',
+        section_buttons: 'دکمه‌ها',
+        btn_primary: 'اصلی', btn_secondary: 'ثانوی', btn_success: 'موفقیت',
+        btn_danger: 'خطر', btn_warning: 'هشدار', btn_info: 'اطلاعات',
+        btn_light: 'روشن', btn_dark: 'تاریک',
+        section_form: 'فرم',
+        form_email_label: 'آدرس ایمیل', form_email_ph: 'ایمیل خود را وارد کنید',
+        form_msg_label: 'پیام', form_msg_ph: 'پیام خود را بنویسید...',
+        form_agree: 'موافقم با شرایط', form_submit: 'ارسال',
+        section_alerts: 'هشدارها',
+        alert_primary: 'این یک هشدار اصلی است.',
+        alert_success: 'این عملیات با موفقیت انجام شد.',
+        alert_warning: 'این یک هشدار است. توجه کنید.',
+        alert_danger: 'خطایی رخ داده است.',
+        section_table: 'جدول',
+        th_name: 'نام', th_lastname: 'نام خانوادگی', th_email: 'ایمیل',
+        row1_name: 'علی', row1_last: 'احمدی',
+        row2_name: 'مریم', row2_last: 'حسینی',
+        row3_name: 'رضا', row3_last: 'محمدی',
+        footer: 'بوت‌استرپ ۵ RTL \u2014 ساخته شده با ❤️'
+    },
+    en: {
+        brand: 'Bootstrap 5 RTL',
+        nav_home: 'Home', nav_about: 'About Us', nav_services: 'Services', nav_contact: 'Contact',
+        hero_title: 'Bootstrap 5 with RTL Support',
+        hero_lead: 'This project is a RTL version of Bootstrap 5 for Persian and Arabic languages.',
+        hero_cta: 'Get Started', hero_more: 'Learn More',
+        card1_title: 'Card One', card2_title: 'Card Two', card3_title: 'Card Three',
+        card1_text: 'This is a sample text for displaying a card in RTL mode. The text is aligned correctly.',
+        card2_text: 'This is a sample text for displaying a card in RTL mode. The text is aligned correctly.',
+        card3_text: 'This is a sample text for displaying a card in RTL mode. The text is aligned correctly.',
+        read_more: 'Read More',
+        section_buttons: 'Buttons',
+        btn_primary: 'Primary', btn_secondary: 'Secondary', btn_success: 'Success',
+        btn_danger: 'Danger', btn_warning: 'Warning', btn_info: 'Info',
+        btn_light: 'Light', btn_dark: 'Dark',
+        section_form: 'Form',
+        form_email_label: 'Email Address', form_email_ph: 'Enter your email',
+        form_msg_label: 'Message', form_msg_ph: 'Write your message...',
+        form_agree: 'I agree to the terms', form_submit: 'Submit',
+        section_alerts: 'Alerts',
+        alert_primary: 'This is a primary alert.',
+        alert_success: 'This operation was completed successfully.',
+        alert_warning: 'This is a warning. Please pay attention.',
+        alert_danger: 'An error has occurred.',
+        section_table: 'Table',
+        th_name: 'First Name', th_lastname: 'Last Name', th_email: 'Email',
+        row1_name: 'Ali', row1_last: 'Ahmadi',
+        row2_name: 'Maryam', row2_last: 'Hosseini',
+        row3_name: 'Reza', row3_last: 'Mohammadi',
+        footer: 'Bootstrap 5 RTL \u2014 Made with ❤️'
+    },
+    da: {
+        brand: 'Bootstrap 5 RTL',
+        nav_home: 'Hjem', nav_about: 'Om os', nav_services: 'Tjenester', nav_contact: 'Kontakt',
+        hero_title: 'Bootstrap 5 med RTL-understøttelse',
+        hero_lead: 'Dette projekt er en RTL-version af Bootstrap 5 til persiske og arabiske sprog.',
+        hero_cta: 'Kom i gang', hero_more: 'Læs mere',
+        card1_title: 'Kort ét', card2_title: 'Kort to', card3_title: 'Kort tre',
+        card1_text: 'Dette er en eksempeltekst til visning af et kort i RTL-tilstand. Teksten er korrekt justeret.',
+        card2_text: 'Dette er en eksempeltekst til visning af et kort i RTL-tilstand. Teksten er korrekt justeret.',
+        card3_text: 'Dette er en eksempeltekst til visning af et kort i RTL-tilstand. Teksten er korrekt justeret.',
+        read_more: 'Læs mere',
+        section_buttons: 'Knapper',
+        btn_primary: 'Primær', btn_secondary: 'Sekundær', btn_success: 'Succes',
+        btn_danger: 'Fare', btn_warning: 'Advarsel', btn_info: 'Info',
+        btn_light: 'Lys', btn_dark: 'Mørk',
+        section_form: 'Formular',
+        form_email_label: 'E-mailadresse', form_email_ph: 'Indtast din e-mail',
+        form_msg_label: 'Besked', form_msg_ph: 'Skriv din besked...',
+        form_agree: 'Jeg accepterer vilkårene', form_submit: 'Send',
+        section_alerts: 'Advarsler',
+        alert_primary: 'Dette er en primær advarsel.',
+        alert_success: 'Handlingen blev fuldført med succes.',
+        alert_warning: 'Dette er en advarsel. Vær opmærksom.',
+        alert_danger: 'Der er opstået en fejl.',
+        section_table: 'Tabel',
+        th_name: 'Fornavn', th_lastname: 'Efternavn', th_email: 'E-mail',
+        row1_name: 'Ali', row1_last: 'Ahmadi',
+        row2_name: 'Maryam', row2_last: 'Hosseini',
+        row3_name: 'Reza', row3_last: 'Mohammadi',
+        footer: 'Bootstrap 5 RTL \u2014 Lavet med ❤️'
+    }
+};
+
+const langConfig = {
+    fa: { dir: 'rtl', css: 'public/css/style-rtl.min.css' },
+    en: { dir: 'ltr', css: 'public/css/style-ltr.min.css' },
+    da: { dir: 'ltr', css: 'public/css/style-ltr.min.css' }
+};
+
+function applyLanguage(lang) {
+    const t = translations[lang];
+    const cfg = langConfig[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = cfg.dir;
+    document.getElementById('bootstrap-css').href = cfg.css;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.placeholder = t[key];
+    });
+    localStorage.setItem('lang', lang);
+}
+
+document.querySelectorAll('input[name="lang"]').forEach(radio => {
+    radio.addEventListener('change', () => applyLanguage(radio.value));
+});
+
+// Restore saved language on load
+const savedLang = localStorage.getItem('lang') || 'fa';
+const radio = document.getElementById('lang-' + savedLang);
+if (radio) radio.checked = true;
+applyLanguage(savedLang);
+</script>
 </body>
 </html>
