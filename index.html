@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 RTL</title>
+    <!-- Bootstrap 5 RTL CSS (built output) -->
+    <link rel="stylesheet" href="public/css/style-rtl.min.css">
+    <style>
+        body {
+            font-family: 'Vazir', Tahoma, Arial, sans-serif;
+        }
+        @font-face {
+            font-family: 'Vazir';
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">بوت‌استرپ ۵ راست به چپ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">تماس</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>بوت‌استرپ ۵ با پشتیبانی راست به چپ</h1>
+            <p class="lead">این پروژه نسخه RTL بوت‌استرپ ۵ برای زبان‌های فارسی و عربی است.</p>
+            <a href="#" class="btn btn-primary btn-lg">شروع کنید</a>
+            <a href="#" class="btn btn-outline-secondary btn-lg me-2">بیشتر بدانید</a>
+        </div>
+    </div>
+</div>
+
+<!-- Cards Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">کارت اول</h5>
+                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-primary">بیشتر بخوانید</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">کارت دوم</h5>
+                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-success">بیشتر بخوانید</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">کارت سوم</h5>
+                    <p class="card-text">این یک نمونه متن برای نمایش کارت در حالت راست به چپ است. متن به درستی تراز شده است.</p>
+                    <a href="#" class="btn btn-danger">بیشتر بخوانید</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Buttons Section -->
+<div class="container mt-3 mb-5">
+    <h3>دکمه‌ها</h3>
+    <button type="button" class="btn btn-primary">اصلی</button>
+    <button type="button" class="btn btn-secondary">ثانوی</button>
+    <button type="button" class="btn btn-success">موفقیت</button>
+    <button type="button" class="btn btn-danger">خطر</button>
+    <button type="button" class="btn btn-warning">هشدار</button>
+    <button type="button" class="btn btn-info">اطلاعات</button>
+    <button type="button" class="btn btn-light">روشن</button>
+    <button type="button" class="btn btn-dark">تاریک</button>
+
+    <h3 class="mt-4">فرم</h3>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInput" class="form-label">آدرس ایمیل</label>
+            <input type="email" class="form-control" id="exampleInput" placeholder="ایمیل خود را وارد کنید">
+        </div>
+        <div class="mb-3">
+            <label for="exampleTextarea" class="form-label">پیام</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="پیام خود را بنویسید..."></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck">
+            <label class="form-check-label" for="exampleCheck">موافقم با شرایط</label>
+        </div>
+        <button type="submit" class="btn btn-primary">ارسال</button>
+    </form>
+
+    <h3 class="mt-4">هشدارها</h3>
+    <div class="alert alert-primary" role="alert">این یک هشدار اصلی است.</div>
+    <div class="alert alert-success" role="alert">این عملیات با موفقیت انجام شد.</div>
+    <div class="alert alert-warning" role="alert">این یک هشدار است. توجه کنید.</div>
+    <div class="alert alert-danger" role="alert">خطایی رخ داده است.</div>
+
+    <h3 class="mt-4">جدول</h3>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>ایمیل</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>۱</td>
+                <td>علی</td>
+                <td>احمدی</td>
+                <td>ali@example.com</td>
+            </tr>
+            <tr>
+                <td>۲</td>
+                <td>مریم</td>
+                <td>حسینی</td>
+                <td>maryam@example.com</td>
+            </tr>
+            <tr>
+                <td>۳</td>
+                <td>رضا</td>
+                <td>محمدی</td>
+                <td>reza@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">بوت‌استرپ ۵ RTL &mdash; ساخته شده با ❤️</p>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="public/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
